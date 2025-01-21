@@ -1,0 +1,59 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header, nav, main, footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  .header { background: #1abc9c; }
+  .nav { background: #3498db; }
+  .footer { background: #e74c3c; }
+  .main { background: #ecf0f1; padding: 20px; }
+  
+  /* Uncomment this section for Flexbox Demo */
+  /*
+  .flex-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    height: 200px;
+    background-color: #f39c12;
+    border: 2px solid #d35400;
+  }
+  
+  .flex-item {
+    background-color: #8e44ad;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  */
+  
+  /* Uncomment this section for Grid Demo */
+  /*
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #2ecc71;
+    border: 2px solid #27ae60;
+  }
+  
+  .grid-item {
+    background-color: #9b59b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  */
+  
