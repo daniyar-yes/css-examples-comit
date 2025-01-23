@@ -1,4 +1,4 @@
-/* Basic Styling */
+/* Base Styles (Mobile-First Approach) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,54 +6,79 @@ body {
     box-sizing: border-box;
   }
   
-  header, nav, main, footer {
+  header, footer {
+    text-align: center;
     padding: 10px;
-    text-align: center;
     color: white;
   }
   
-  .header { background: #1abc9c; }
-  .nav { background: #3498db; }
-  .footer { background: #e74c3c; }
-  .main { background: #ecf0f1; padding: 20px; }
-  
-  /* Uncomment this section for Flexbox Demo */
-  /*
-  .flex-container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    height: 200px;
-    background-color: #f39c12;
-    border: 2px solid #d35400;
+  .header {
+    background-color: #3498db;
   }
   
-  .flex-item {
-    background-color: #8e44ad;
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-  }
-  */
-  
-  /* Uncomment this section for Grid Demo */
-  /*
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 20px;
+  .footer {
     background-color: #2ecc71;
-    border: 2px solid #27ae60;
   }
   
-  .grid-item {
-    background-color: #9b59b6;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
   }
-  */
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .box {
+    padding: 20px;
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+  }
+  
+  .sidebar {
+    padding: 20px;
+    background-color: #f1c40f;
+    color: black;
+  }
+  
+  /* Media Query: Tablet View (600px and up) */
+  @media screen and (min-width: 600px) {
+    .main {
+      flex-direction: row;
+    }
+  
+    .content {
+      flex: 2;
+      flex-direction: row;
+    }
+  
+    .sidebar {
+      flex: 1;
+    }
+  }
+  
+  /* Media Query: Desktop View (1024px and up) */
+  @media screen and (min-width: 1024px) {
+    header, footer {
+      font-size: 1.5rem;
+    }
+  
+    .content {
+      justify-content: space-between;
+    }
+  
+    .box {
+      padding: 40px;
+      font-size: 1.2rem;
+    }
+  
+    .sidebar {
+      padding: 40px;
+    }
+  }
   
