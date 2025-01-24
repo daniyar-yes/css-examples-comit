@@ -5,15 +5,36 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
+
+  button {
+    min-width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-left: 50px;
+    text-align: center;
+  }
+
+  #grocery-item {
+    margin-top: 30px;
+    margin-left: 15px;
+  }
   
   header, footer {
     text-align: center;
     padding: 10px;
     color: white;
   }
+
+  img {
+    width: 30%;
+    aspect-ratio: 5 / 5;
+    
+  }
   
   .header {
-    background-color: #3498db;
+    background-color: #f1c40f ;
   }
   
   .footer {
@@ -60,6 +81,12 @@ body {
     .sidebar {
       flex: 1;
     }
+
+    img {
+        width: 60%;
+        aspect-ratio: 5 / 5;
+        
+      }
   }
   
   /* Media Query: Desktop View (1024px and up) */
@@ -80,5 +107,12 @@ body {
     .sidebar {
       padding: 40px;
     }
+
+    img {
+        width: 80%;
+        max-width: 300px;
+        aspect-ratio: 5 / 5;
+        
+      }
   }
   
