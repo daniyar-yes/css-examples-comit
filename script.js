@@ -1,44 +1,27 @@
-let result = '19999';
-console.log('result from outside: ', result)
+// Given a string: 'abc'
+// count the total number of character 'a' in it, and output it.
 
-let accumulatedValue = 0;
+function solveProblem(stringInput, charToCompare) {
+    let result = 0;
 
-const arg1 = 10;
-const arg2 = 100;
-const arg3 = 1;
 
-// example of arrow function
-const sayHi = (number1, number2, number3) => {
-    let sumFromFunction = number1 + number2 + number3;
-    accumulatedValue = accumulatedValue + sumFromFunction;
-    console.log('from function directly:', accumulatedValue)
-    return accumulatedValue;
+    for (let i = 0; i < stringInput.length; i++) {
+        console.log('iteration #', i+1, result)
+        if (stringInput[i] == charToCompare) {
+            result++;
+            console.log('result right before return:', result)
+            
+        }
+    }
+
+    return result;
+
+    console.log('after the return')
+
 }
 
-// example of regular function
+console.log('Result:',solveProblem('bcaa', 'a'))
 
-function sayBi () {
-    console.log('goodbye')
-}
-// function call
-sayBi();
-
-let endResult = sayHi(arg1, arg2, arg3);
-console.log('first call:', endResult)
-
-let bonus = 100000000000000000;
-let monthlySalary = endResult + bonus;
-
-// function call that stores the return of the f-n in the variable
-endResult = sayHi(arg1, arg2, arg3);
-console.log('second call:', endResult)
-endResult = sayHi(arg1, arg2, arg3);
-console.log('third call:', endResult)
-endResult = sayHi(arg1, arg2, arg3);
-console.log('4th call:', endResult)
-console.log('final value of accumulator:', accumulatedValue)
-console.log('monthlySalary:', monthlySalary)
-
-// anon function example (inside setTimeout, before ,5000)
-
-setTimeout(() => console.log('hi from setTimeout'), 5000)
+// for (let j = -1; j > -10; j--) {
+//     console.log('hi from negatives', j)
+// }
