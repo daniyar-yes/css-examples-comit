@@ -1,27 +1,31 @@
-// Given a string: 'abc'
-// count the total number of character 'a' in it, and output it.
+// check if a string is a palindrome and return true or false
 
-function solveProblem(stringInput, charToCompare) {
-    let result = 0;
+function checkIfPalindrome(word) {
+
+    let processedWord = word.toLowerCase().split('.').join('');
+
+    if (processedWord.length <=1) {
+        return false;
+    }
+    
+    let left = 0;
+    let right = processedWord.length - 1;
 
 
-    for (let i = 0; i < stringInput.length; i++) {
-        console.log('iteration #', i+1, result)
-        if (stringInput[i] == charToCompare) {
-            result++;
-            console.log('result right before return:', result)
-            
+    while (left < right) {
+        if (processedWord[left] !== processedWord[right]) {
+            return false;
         }
+
+        left++;
+        right--;
     }
 
-    return result;
-
-    console.log('after the return')
-
+    return true;
 }
 
-console.log('Result:',solveProblem('bcaa', 'a'))
+let textToShow = checkIfPalindrome('Now do I repayaper i od won.')
+console.log(textToShow)
 
-// for (let j = -1; j > -10; j--) {
-//     console.log('hi from negatives', j)
-// }
+// kayark
+//  lr
