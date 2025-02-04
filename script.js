@@ -1,69 +1,40 @@
-// if - else, switches, loop: for loop, while
+const inputField = document.querySelector('#grocery-input');
+const addItemButton = document.querySelector('#add-item');
+const groceryList = document.querySelector('#grocery-list')
 
 
-const fruit = '';
+function addGrocery() {
+    const textFromInput = inputField.value.trim();
 
-switch (fruit) {
-    case 'Apple':
-        console.log('🍎');
-        break;
-    case 'Lemon':
-        console.log('🍋');
-        break;
-    default:
-        console.log('🍊')
+    if (textFromInput) {
+        // create a list item with specific text of grocery
+        const listItem = document.createElement('button');
+        listItem.textContent = 'Im a button';
+
+        const checkBox = document.createElement('input');
+        checkBox.type = 'checkbox';
+
+        checkBox.addEventListener('change', () => {
+            listItem.style.textDecoration = checkBox.checked ? 'line-through' : 'none';
+        })
+
+
+        listItem.appendChild(checkBox)
+
+        groceryList.appendChild(listItem)
+
+        inputField.value = '';
+    }
+    
+
 }
 
-// const outputText = (a > b) ? 'from if' : 'text from else';
+addItemButton.addEventListener('click', addGrocery)
 
-// console.log(outputText)
-
-
-
-
-
-
-function outputB (parameterB) {
-    console.log('hi from function')
-    console.log(parameterB)
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// const groceryItemFromInput = document.querySelector("input");
-// const addButton = document.querySelector("button");
-// callMyDoctor('headache')
-
-
-// function addNewGroceryItem() {
-//     const itemToAdd= groceryItemFromInput.value;
-//     if (itemToAdd) {
-//         const newGroceryItem = document.createElement("li");
-//         newGroceryItem.textContent = itemToAdd;
-//         document.querySelector("ul").appendChild(newGroceryItem);
-//         groceryItemFromInput.value = "";
-//     }
-// }
-
-// addButton.addEventListener('click', addNewGroceryItem);
-
-
-
-
-
-// function callMyDoctor (problem) {
-//     const HARD_CODED_NUMBER = '236-777-8888';
-//     console.log(HARD_CODED_NUMBER, problem)
-// }
+inputField.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        addGrocery();
+    }
+})
 
 
